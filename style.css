@@ -1,0 +1,64 @@
+/* General Styles */
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #f5f5f5;
+}
+
+.tab-content {
+    -fx-padding: 20;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d3d3d3;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.title-label, .main-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 20 0 20 0;
+    -fx-text-alignment: center;
+}
+
+/* Button Styles */
+.button {
+    -fx-background-radius: 25;
+    -fx-padding: 10 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+.button-green {
+    -fx-background-color: #2ecc71;
+}
+
+.button-red {
+    -fx-background-color: #e74c3c;
+}
+
+.button-yellow {
+    -fx-background-color: #f1c40f;
+}
+
+.button-blue {
+    -fx-background-color: #3498db;
+}
+
+/* TextField and ComboBox Styles */
+.text-field, .combo-box {
+    -fx-background-color: #f9f9f9;
+    -fx-border-radius: 5;
+    -fx-border-color: #cccccc;
+    -fx-padding: 8;
+}
+
+/* Error Label */
+.error-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e74c3c;
+    -fx-padding: 5 0 0 0;
+    -fx-alignment: center;
+}

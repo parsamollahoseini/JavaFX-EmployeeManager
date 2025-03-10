@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      alignment="CENTER"
+      spacing="20"
+      fx:controller="com.example.projectv3.LoginController"
+      styleClass="login-container">
+    <Label text="Login" styleClass="login-title" />
+    <TextField fx:id="usernameField" promptText="Username" styleClass="login-input" />
+    <PasswordField fx:id="passwordField" promptText="Password" styleClass="login-input" />
+    <VBox alignment="CENTER" spacing="10">
+        <Button text="Login" onAction="#handleLogin" styleClass="login-button login-button-primary" />
+        <Button text="Register" onAction="#openRegister" styleClass="login-button login-button-secondary" />
+    </VBox>
+    <Label fx:id="errorLabel" text="Invalid username or password." visible="false" styleClass="login-error-label" />
+</VBox>

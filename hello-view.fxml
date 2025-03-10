@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="com.example.projectv3.HelloController"
+         style="-fx-background-color: #f5f5f5;">
+    <tabs>
+        <!-- Employee Management Tab -->
+        <Tab text="Employee Management">
+            <VBox spacing="20" alignment="TOP_CENTER" styleClass="tab-content">
+                <Label text="Employee Management" styleClass="title-label" />
+                <GridPane hgap="15" vgap="15" alignment="CENTER">
+                    <TextField fx:id="idField" promptText="Employee ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="nameField" promptText="Name" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <ComboBox fx:id="departmentComboBox" promptText="Select Department" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="positionField" promptText="Position" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <TextField fx:id="emailField" promptText="Email" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="phoneField" promptText="Phone" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <TextField fx:id="rateField" promptText="Hourly Rate" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <TextField fx:id="attendanceField" promptText="Attendance Days" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                    <TextField fx:id="leaveField" promptText="Leave Days" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                </GridPane>
+                <HBox spacing="15" alignment="CENTER">
+                    <Button text="Add Employee" onAction="#addEmployee" styleClass="button-green" />
+                    <Button text="Delete Employee" onAction="#deleteEmployee" styleClass="button-red" />
+                    <Button text="Update Employee" onAction="#updateEmployee" styleClass="button-yellow" />
+                </HBox>
+                <TableView fx:id="employeeTable" prefHeight="300" onMouseClicked="#onEmployeeSelected">
+                    <columns>
+                        <TableColumn text="ID" fx:id="idColumn" />
+                        <TableColumn text="Name" fx:id="nameColumn" />
+                        <TableColumn text="Department" fx:id="deptColumn" />
+                        <TableColumn text="Position" fx:id="positionColumn" />
+                        <TableColumn text="Email" fx:id="emailColumn" />
+                        <TableColumn text="Phone" fx:id="phoneColumn" />
+                        <TableColumn text="Hourly Rate" fx:id="rateColumn" />
+                    </columns>
+                </TableView>
+                <HBox spacing="15" alignment="CENTER">
+                    <Button text="Save Employees" onAction="#saveEmployees" styleClass="button-blue" />
+                    <Button text="Load Employees" onAction="#loadEmployees" styleClass="button-blue" />
+                </HBox>
+            </VBox>
+        </Tab>
+
+
+        <Tab text="Department Management">
+            <VBox spacing="20" alignment="TOP_CENTER" styleClass="tab-content">
+                <Label text="Department Management" styleClass="title-label" />
+                <GridPane hgap="15" vgap="15" alignment="CENTER">
+                    <TextField fx:id="deptIdField" promptText="Department ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="deptNameField" promptText="Department Name" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                </GridPane>
+                <HBox spacing="15" alignment="CENTER">
+                    <Button text="Add Department" onAction="#addDepartment" styleClass="button-green" />
+                    <Button text="Delete Department" onAction="#deleteDepartment" styleClass="button-red" />
+                    <Button text="Update Department" onAction="#updateDepartment" styleClass="button-yellow" />
+                    <Button text="Save Departments" onAction="#saveDepartments" styleClass="button-blue" />
+                    <Button text="Load Departments" onAction="#loadDepartments" styleClass="button-blue" />
+                </HBox>
+                <TableView fx:id="departmentTable" prefHeight="300">
+                    <columns>
+                        <TableColumn text="ID" fx:id="deptIdColumn" />
+                        <TableColumn text="Name" fx:id="deptNameColumn" />
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <!-- Payroll Processing Tab -->
+        <Tab text="Payroll Processing">
+            <VBox spacing="20" alignment="TOP_CENTER" styleClass="tab-content">
+                <Label text="Payroll Processing" styleClass="title-label" />
+                <GridPane hgap="15" vgap="15" alignment="CENTER">
+                    <ComboBox fx:id="employeeDropdown" promptText="Select Employee" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="hoursField" promptText="Hours Worked" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="overtimeField" promptText="Overtime Hours" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <TextField fx:id="bonusField" promptText="Bonus" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                </GridPane>
+                <Button text="Generate Payroll" onAction="#generatePayroll" styleClass="button-green" />
+                <Label fx:id="resultLabel" styleClass="result-label" />
+            </VBox>
+        </Tab>
+
+        <!-- Reporting Tab -->
+        <Tab text="Reporting">
+            <VBox spacing="20" alignment="TOP_CENTER" styleClass="tab-content">
+                <Label text="Payroll and Department Reports" styleClass="title-label" />
+                <TableView fx:id="reportTable" prefHeight="300">
+                    <columns>
+                        <TableColumn text="Name" fx:id="reportNameColumn" />
+                        <TableColumn text="Gross Salary" fx:id="reportGrossColumn" />
+                        <TableColumn text="Tax Deduction" fx:id="reportTaxColumn" />
+                        <TableColumn text="Net Salary" fx:id="reportNetColumn" />
+                    </columns>
+                </TableView>
+                <Button text="Export Report" onAction="#exportReport" styleClass="button-blue" />
+                <PieChart fx:id="payrollChart" prefHeight="300" />
+            </VBox>
+        </Tab>
+    </tabs>
+</TabPane>
