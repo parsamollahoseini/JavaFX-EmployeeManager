@@ -34,17 +34,14 @@ This project is a JavaFX-powered desktop application that efficiently manages em
 
 ## 🖥️ Screenshots
 
-### 🖥 Main Dashboard
-![Main Dashboard](path/to/your/image1.png)
-
 ### Employee Management Interface
-![Employee Management](path/to/your/image2.png)
+![Employee Management](image/Picture2.png)
 
 ### Department Management Interface
-![Department Management](path/to/your/image3.png)
+![Department Management](image/Picture4.png)
 
 ### Payroll Report Example
-![Payroll Generation](path/to/your/image4.png)
+![Payroll Generation](image/Picture3.png)
 
 ## 🛠️ Technologies Used
 - **Java**
