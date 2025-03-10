@@ -15,22 +15,6 @@ This project is a JavaFX-powered desktop application that efficiently manages em
 - **💾 Persistent Storage:** Utilizes Java serialization to reliably store and retrieve data.
 - **📑 CSV Export:** Generate payroll reports for external use.
 
-## 🎯 Project Structure
-
-```
-📦Employee-Department-Management
- ┣ 📂src
- ┃ ┣ 📂controllers
- ┃ ┃ ┗ 📜HelloController.java
- ┃ ┗ 📂models
- ┃   ┣ 📜Employee.java
- ┃   ┗ 📜Department.java
- ┣ 📂resources
- ┃ ┗ 📜payroll_reports.csv
- ┗ 📂data
-   ┣ 📜employees.dat
-   ┗ 📜departments.dat
-```
 
 ## 🖥️ Screenshots
 
